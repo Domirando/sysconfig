@@ -11,21 +11,29 @@
       # the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
-    }; 
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-	  specialArgs = { inherit inputs; };
-          modules = [
-            ./configuration.nix
-	    home-manager.nixosModules.home-manager {
-		home-manager.useGlobalPkgs = true;
-		home-manager.useUserPackages = true;
-		home-manager.users.domirando = import ./home.nix;
-	    }
-          ];
-       };
-  };
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.domirando = import ./home.nix;
+          }
+        ];
+      };
+    };
 }

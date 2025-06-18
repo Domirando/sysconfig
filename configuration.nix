@@ -2,16 +2,24 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./distributed-builds.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./distributed-builds.nix
+  ];
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -74,19 +82,25 @@
   users.users.domirando = {
     isNormalUser = true;
     description = "Domirando";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
   security.sudo.wheelNeedsPassword = false;
   # Install firefox.
   programs.firefox.enable = true;
-  /* home-manager.nixosModules.home-manager {
-	home-manager.useGlobalPkgs = true;
-	home-manager.useUserPackages = true;
-	home-manager.users.domirando = import ./home.nix;
-  };*/
+  /*
+    home-manager.nixosModules.home-manager {
+    	home-manager.useGlobalPkgs = true;
+    	home-manager.useUserPackages = true;
+    	home-manager.users.domirando = import ./home.nix;
+      };
+  */
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -95,28 +109,28 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	wget
-	vim
-	kubectl
-	element-desktop
-	discord-ptb
-	prismlauncher
-	spotify
-	ghostty
-	jetbrains.webstorm
-	git
-	gh
-	rustc
-	cargo
-	clippy
-	rustfmt
-	zaz
-	docker
-	vscode
-	zed
-	zed-editor
-	inputs.helix.packages."${pkgs.system}".helix
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    vim
+    kubectl
+    element-desktop
+    discord-ptb
+    prismlauncher
+    spotify
+    ghostty
+    jetbrains.webstorm
+    git
+    gh
+    rustc
+    cargo
+    clippy
+    rustfmt
+    zaz
+    docker
+    vscode
+    zed
+    zed-editor
+    inputs.helix.packages."${pkgs.system}".helix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -1,12 +1,12 @@
 {
-   users.users.remotebuild = {
- 	isNormalUser = true;
-	createHome = false;
-	group = "remotebuild";
+  users.users.remotebuild = {
+    isNormalUser = true;
+    createHome = false;
+    group = "remotebuild";
 
-	openssh.authorizedKeys.keyFiles = [ ./remotebuild.pub ];
-   };
-   users.groups.remotebuild = {};
+    openssh.authorizedKeys.keyFiles = [ ./remotebuild.pub ];
+  };
+  users.groups.remotebuild = { };
 
-   nix.settings.trusted-users = [ "remotebuild" ];
+  nix.settings.trusted-users = [ "remotebuild" ];
 }
