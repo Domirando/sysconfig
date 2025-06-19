@@ -13,7 +13,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./distributed-builds.nix
+    # ./distributed-builds.nix
   ];
 
   nix.settings.experimental-features = [
@@ -121,10 +121,10 @@
     jetbrains.webstorm
     git
     gh
-    rustc
-    cargo
-    clippy
-    rustfmt
+    # rustc
+    # cargo
+    # clippy
+    # rustfmt
     zaz
     docker
     vscode

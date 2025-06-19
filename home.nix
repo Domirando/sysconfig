@@ -12,7 +12,8 @@ in
   home.packages = with pkgs; [
     neofetch
     nnn
-
+    cargo
+    gcc
     #archives
     zip
     nixfmt-rfc-style
