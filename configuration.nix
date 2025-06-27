@@ -48,6 +48,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.xfce.enable = false;
   services.xserver.desktopManager.gnome.enable = true;
+  services.e-imzo.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -76,8 +77,8 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "domirando";
+  # services.xserver.displayManager.autoLogin.enable = true;
+  # services.xserver.displayManager.autoLogin.user = "domirando";
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.domirando = {
     isNormalUser = true;
@@ -112,6 +113,7 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     vim
+    #e-imzo
     kubectl
     element-desktop
     discord-ptb
@@ -130,8 +132,7 @@
     vscode
     zed
     zed-editor
-    inputs.helix.packages."${pkgs.system}".helix
-  ];
+     ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
