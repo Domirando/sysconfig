@@ -3,9 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    helix.url = "github:helix-editor/helix/master";
-    e-imzo.url = "github:xinux-org/e-imzo";   
-    home-manager = { 
+    home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with
@@ -18,9 +16,8 @@
   outputs =
     {
       self,
-      nixpkgs,
+      nixpks, 
       home-manager,
-      e-imzo,	
       ...
     }@inputs:
     {
@@ -35,11 +32,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.domirando = import ./home.nix;
           }
-	# e-imzo.nixosModules.e-imzo
         ];
-	
-	    
       };
     };
 }
-

@@ -1,9 +1,12 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+let
+  modulesHome = import ./modules;
+  espanso = import ./modules/espanso.nix;
+in
+{
   imports = [
-	./modules/espanso.nix 
-	./modules/vscode.nix
+    espanso
   ];
-  #modulesHome = import ./modules;
   home.username = "domirando";
   home.homeDirectory = "/home/domirando";
   xresources.properties = {
@@ -22,7 +25,6 @@
     unzip
     xz
     espanso
-    #espanso-wayland
     #utils
     ripgrep
     jq
@@ -36,15 +38,26 @@
     glow
 
     telegram-desktop
-];
+  ];
   programs.git = {
     enable = true;
     userName = "Domirando";
     userEmail = "vohidjonovnamaftuna@gmail.com";
   };
-    #userSettings = {
-     # "workbench.colorTheme" = "Dracula Theme";
-    #};
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+    extensions = with pkgs; [
+      vscode-extensions.jnoortheen.nix-ide
+      vscode-extensions.rust-lang.rust-analyzer
+      vscode-extensions.yzhang.markdown-all-in-one
+      vscode-extensions.tal7aouy.icons
+      #	vscode-marketplace.dracula-theme.theme-dracula
+    ];
+    userSettings = {
+      "workbench.coloTheme" = "Dracula Theme";
+    };
+  };
   programs.alacritty = {
     enable = true;
     settings = {

@@ -14,6 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     # ./distributed-builds.nix
+    inputs.home-manager.nixosModules.home-manager
   ];   
 
   nix.settings.experimental-features = [
@@ -48,7 +49,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.xfce.enable = false;
   services.xserver.desktopManager.gnome.enable = true;
-  services.e-imzo.enable = true;
+  # services.e-imzo.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -160,5 +161,9 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
+  home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.domirando = import ./home.nix;
+  };
 }
