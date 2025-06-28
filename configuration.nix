@@ -14,7 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     # ./distributed-builds.nix
-    inputs.home-manager.nixosModules.home-manager
+   # inputs.home-manager.nixosModules.home-manager
   ];   
 
   nix.settings.experimental-features = [
@@ -96,13 +96,14 @@
   security.sudo.wheelNeedsPassword = false;
   # Install firefox.
   programs.firefox.enable = true;
-  /*
-    home-manager.nixosModules.home-manager {
-    	home-manager.useGlobalPkgs = true;
-    	home-manager.useUserPackages = true;
-    	home-manager.users.domirando = import ./home.nix;
-      };
-  */
+  
+  #home-manager = {
+   # 	useGlobalPkgs = true;
+    #	useUserPackages = true;
+    #	users.domirando = {
+#		imports = [./home.nix];
+#	};
+ # };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -117,6 +118,7 @@
     #e-imzo
     kubectl
     element-desktop
+    fractal
     discord-ptb
     prismlauncher
     spotify
@@ -124,14 +126,10 @@
     jetbrains.webstorm
     git
     gh
-    # rustc
-    # cargo
-    # clippy
-    # rustfmt
+    alejandra
     zaz
     docker
-    vscode
-    zed
+  
     zed-editor
      ];
 
@@ -160,10 +158,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
-  home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.domirando = import ./home.nix;
-  };
+  system.stateVersion = "25.05"; # Did you read the comment? 
 }
