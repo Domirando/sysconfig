@@ -36,6 +36,7 @@ in
 
     glow
 
+    fractal
     telegram-desktop
   ];
   programs.git = {
