@@ -23,7 +23,7 @@ in
     p7zip
     unzip
     xz
-    espanso
+    #espanso
     #utils
     ripgrep
     jq
@@ -51,6 +51,12 @@ in
     bashrcExtra = ''
         	export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       	'';
+    shellAliases = {
+  	nrs = "sudo nixos-rebuild switch --flake . --show-trace";
+    };
+    initExtra = ''
+	export PS1='\u\[\e[38;5;135;1m\]\w\[\e[38;5;46;5m\]\\$\[\e[0m\] '
+    '';
   };
   home.stateVersion = "25.05";
 }

@@ -5,10 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     home-manager = {
 	url = "github:nix-community/home-manager/release-25.05";
-      # The `follows` keyword in inputs is used for inheritance.
-      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
-      # the `inputs.nixpkgs` of the current flake,
-      # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -30,6 +26,7 @@
           {
           	home-manager.useGlobalPkgs = true;
           	home-manager.useUserPackages = true;
+		home-manager.backupFileExtension = "backup";
           	home-manager.users.domirando = {
 			imports = [ ./home.nix ];
 		};
