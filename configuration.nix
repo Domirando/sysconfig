@@ -2,6 +2,7 @@
 {
   config,
   pkgs,
+  lib,
   inputs,
   ...
 }: {
@@ -23,6 +24,7 @@
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
+
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
@@ -53,6 +55,16 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.espanso = {
+    enable = true;
+    package = pkgs.espanso-wayland;
+  };
+  security.wrappers.espanso = {
+    source = "${lib.getExe pkgs.espanso-wayland}";
+    capabilities = "cap_dac_override+eip";
+    owner = "domirando";
+    group = "users";
+  };
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -77,6 +89,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "input"
     ];
     packages = with pkgs; [
       #  thunderbird
