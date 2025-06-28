@@ -4,13 +4,11 @@
   pkgs,
   inputs,
   ...
-}:
-
-{
+}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-  ];   
+  ];
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -84,10 +82,11 @@
       #  thunderbird
     ];
   };
+
   security.sudo.wheelNeedsPassword = false;
   # Install firefox.
   programs.firefox.enable = true;
- 
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -109,14 +108,14 @@
     jetbrains.webstorm
     git
     gh
-    alejandra
+
     zaz
     docker
-  
+
     zed-editor
-     ];
+  ];
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  system.stateVersion = "25.05"; # Did you read the comment? 
+  system.stateVersion = "25.05"; # Did you read the comment?
 }

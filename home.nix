@@ -1,10 +1,13 @@
-{ outputs, config, pkgs, ... }:
-let
-  modules = import ./modules;
-in
 {
+  outputs,
+  config,
+  pkgs,
+  ...
+}: let
+  modules = import ./modules;
+in {
   imports = [
-    modules.espanso	
+    #modules.espanso
   ];
   home.username = "domirando";
   home.homeDirectory = "/home/domirando";
@@ -23,7 +26,7 @@ in
     p7zip
     unzip
     xz
-    #espanso
+    alejandra
     #utils
     ripgrep
     jq
@@ -44,19 +47,33 @@ in
     userName = "Domirando";
     userEmail = "vohidjonovnamaftuna@gmail.com";
   };
-  
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
     bashrcExtra = ''
-        	export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-      	'';
+            	export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+      export PATH="$PATH:/usr/local/bin/espanso"
+    '';
     shellAliases = {
-  	nrs = "sudo nixos-rebuild switch --flake . --show-trace";
+      nrs = "sudo nixos-rebuild switch --flake . --show-trace";
     };
     initExtra = ''
-	export PS1='\u\[\e[38;5;135;1m\]\w\[\e[38;5;46;5m\]\\$\[\e[0m\] '
+      export PS1='\[\e[38;5;189m\]\u\[\e[0m\] \[\e[38;5;153m\]in \[\e[38;5;129m\]\W\[\e[38;5;46m\]\$\[\e[0m\] '
     '';
   };
+
+  #systemd.user.services.espanso = {
+  #description = "Espanso Text Expander (Wayland)";
+  #after = [ "network.target" ];
+  #wantedBy = [ "default.target" ];
+  #serviceConfig = {
+  #   ExecStart = "${pkgs.espanso-wayland}/bin/espanso"; # Or the wrapper if needed
+  #   Restart = "on-failure";
+  # Add any other service configurations as needed
+
+  #};
+  # };
+
   home.stateVersion = "25.05";
 }
