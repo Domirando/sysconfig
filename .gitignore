@@ -2,3 +2,4 @@ configuration.nix.save
 result
 *.lock
 *.swp
+*.html
