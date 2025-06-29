@@ -44,8 +44,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.xfce.enable = false;
   services.xserver.desktopManager.gnome.enable = true;
-  # services.e-imzo.enable = true;
-
+  services.e-imzo.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -54,7 +53,6 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
   services.espanso = {
     enable = true;
     package = pkgs.espanso-wayland;
@@ -65,6 +63,8 @@
     owner = "domirando";
     group = "users";
   };
+  
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -111,7 +111,7 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     vim
-    #e-imzo
+   
     kubectl
     element-desktop
     discord-ptb
@@ -124,8 +124,10 @@
 
     zaz
     docker
-
+    e-imzo
     zed-editor
+
+    ntfs3g
   ];
 
   # Enable the OpenSSH daemon.

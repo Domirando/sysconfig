@@ -65,18 +65,5 @@ in {
       export PS1='\[\e[38;5;189m\]\u\[\e[0m\] \[\e[38;5;153m\]in \[\e[38;5;129m\]\W\[\e[38;5;46m\]\$\[\e[0m\] '
     '';
   };
-
-  #systemd.user.services.espanso = {
-  #description = "Espanso Text Expander (Wayland)";
-  #after = [ "network.target" ];
-  #wantedBy = [ "default.target" ];
-  #serviceConfig = {
-  #   ExecStart = "${pkgs.espanso-wayland}/bin/espanso"; # Or the wrapper if needed
-  #   Restart = "on-failure";
-  # Add any other service configurations as needed
-
-  #};
-  # };
-
   home.stateVersion = "25.05";
 }
