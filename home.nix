@@ -41,6 +41,8 @@ in {
 
     fractal
     telegram-desktop
+
+    nodejs_24
   ];
   programs.git = {
     enable = true;
