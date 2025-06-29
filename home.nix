@@ -44,6 +44,7 @@ in {
 
     nodejs_24
     zellij
+    neovim
   ];
   programs.git = {
     enable = true;
