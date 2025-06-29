@@ -43,6 +43,7 @@ in {
     telegram-desktop
 
     nodejs_24
+    zellij
   ];
   programs.git = {
     enable = true;
@@ -63,6 +64,7 @@ in {
     };
     initExtra = ''
       export PS1='\[\e[38;5;189m\]\u\[\e[0m\] \[\e[38;5;153m\]in \[\e[38;5;129m\]\W\[\e[38;5;46m\]\$\[\e[0m\] '
+	eval "$(zellij setup --generate-auto-start bash)"
     '';
   };
   home.stateVersion = "25.05";
