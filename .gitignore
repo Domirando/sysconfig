@@ -2,3 +2,5 @@ configuration.nix.save
 result
 *.lock
 *.swp
+*.iml
+.idea
