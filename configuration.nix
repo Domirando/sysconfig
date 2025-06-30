@@ -113,7 +113,6 @@
     vim
    
     kubectl
-    element-desktop
     discord-ptb
     prismlauncher
     spotify
