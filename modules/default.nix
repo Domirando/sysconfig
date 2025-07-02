@@ -1,3 +1,3 @@
 {
-  espanso = import ./espanso/default.nix;
+  home = import ./home;
 }

@@ -8,15 +8,29 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = {
     self,
     nixpkgs,
     espanso-fix,
+    flake-utils,
     home-manager,
     ...
-  } @ inputs: {
+  } @ inputs: let 
+    outputs = self;
+    in
+        flake-utils.lib.eachDefaultSystem (
+          system: let 
+            pkgs = nixpkgs.legacyPackages.${system};
+          in 
+            {
+              devShells.default = import ./shell.nix pkgs;
+            }
+        )
+  {
+    homeModules = import ./modules/home;
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {inherit inputs;};
