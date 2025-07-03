@@ -1,0 +1,3 @@
+{
+  domirando = ./domirando;
+}

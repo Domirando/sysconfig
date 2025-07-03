@@ -1,14 +1,16 @@
-# Very simple config file with bare minimum packages
 {
   config,
+  outputs,
   pkgs,
   lib,
   inputs,
   ...
 }: {
   imports = [
+    outputs.nixosModules.users.domirando
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   nix.settings.experimental-features = [
@@ -81,19 +83,23 @@
   # services.xserver.displayManager.autoLogin.enable = true;
   # services.xserver.displayManager.autoLogin.user = "domirando";
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.domirando = {
-    isNormalUser = true;
-    description = "Domirando";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "docker"
-      "input"
-    ];
-    packages = with pkgs; [
-      #  thunderbird
-    ];
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
   };
+  # users.users.domirando = {
+  #   isNormalUser = true;
+  #   description = "Domirando";
+  #   extraGroups = [
+  #     "networkmanager"
+  #     "wheel"
+  #     "docker"
+  #     "input"
+  #   ];
+  #   packages = with pkgs; [
+  #     #  thunderbird
+  #   ];
+  # };
 
   security.sudo.wheelNeedsPassword = false;
   # Install firefox.

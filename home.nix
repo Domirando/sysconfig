@@ -21,9 +21,5 @@
   };
 in {
   imports = modules;
-  config = 
-  lib.mkMerge
-  [
-    cfg
-  ];
+  config = cfg;
 }

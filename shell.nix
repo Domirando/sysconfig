@@ -1,7 +1,9 @@
 pkgs: pkgs.stdenv.mkDerivation {
-  name = "devShells";
+  name = "sysDevShells";
   nativeBuildInputs = with pkgs; [
     git
     alejandra
-  ]
+  ];
+  
+  NIX_CONFIG = "extra-experimental-features = nix-command flakes";
 }
