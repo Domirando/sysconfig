@@ -1,5 +1,6 @@
 configuration.nix.save
 result
+.zed
 *.swp
 *.iml
 .idea
