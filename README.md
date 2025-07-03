@@ -1,3 +1,28 @@
-This is a NixOS sys configs, supposed to get better than orzlv's soon:)!
+<p align="center">
+    <img src=".github/assets/header.png" alt="Domirando's Sys Config">
+</p>
 
-For now it has flakes enabled + home manager
+<p align="center">
+    <h3 align="center">My System Configurations.</h3>
+</p>
+
+
+## About
+
+There I save my system configs in order to be able to install them any time to any other device.
+
+
+## Advantages/Features
+
+- Key configurations
+- Software configurations
+- Selfmade scripts
+
+
+## Fun facts & Thanks
+
+- [Orzklv/nix](https://github.com/orzklv/nix) - Learned from his configurations and intended to be the simplified version
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](license) file for details.
