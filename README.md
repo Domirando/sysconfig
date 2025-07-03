@@ -1,10 +1,11 @@
 <p align="center">
+<h1 align="center">My System Configurations.</h3>
+</p>
+<p align="center">
     <img src=".github/assets/header.png" alt="Domirando's Sys Config">
 </p>
 
-<p align="center">
-    <h3 align="center">My System Configurations.</h3>
-</p>
+
 
 
 ## About
