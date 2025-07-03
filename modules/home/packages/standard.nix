@@ -18,4 +18,7 @@
   pkgs.ghostty
   pkgs.unzip
   pkgs.zip
+  pkgs.notes
+  pkgs.errands
+  pkgs.iotas
 ]
