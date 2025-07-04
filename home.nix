@@ -9,6 +9,7 @@
     outputs.homeModules.packages
     outputs.homeModules.bash
     outputs.homeModules.git
+    outputs.homeModules.zellij
   ];
   cfg = {
     home = {
