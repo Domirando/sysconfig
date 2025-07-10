@@ -119,6 +119,7 @@
     git
     jetbrains.webstorm
     e-imzo
+    yandex-music
   ];
 
   # Enable the OpenSSH daemon.
