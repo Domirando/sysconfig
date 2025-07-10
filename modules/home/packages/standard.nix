@@ -28,4 +28,5 @@
   pkgs.docker
   pkgs.zed-editor
   pkgs.ntfs3g
+  pkgs.gnome-builder
 ]
