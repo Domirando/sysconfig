@@ -113,25 +113,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    vim
-
-    kubectl
-    discord-ptb
-    prismlauncher
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default. 
     spotify
-    ghostty
-    jetbrains.webstorm
+    discord-ptb 
     git
-    gh
-
-    zaz
-    docker
+    jetbrains.webstorm
     e-imzo
-    zed-editor
-
-    ntfs3g
   ];
 
   # Enable the OpenSSH daemon.
