@@ -19,14 +19,13 @@
   pkgs.notes
   pkgs.errands
   pkgs.iotas
-  
+
   pkgs.wget
   pkgs.kubectl
   pkgs.prismlauncher
   pkgs.gh
   pkgs.zaz
   pkgs.docker
-  pkgs.zed-editor
   pkgs.ntfs3g
   pkgs.gnome-builder
 ]

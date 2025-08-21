@@ -47,6 +47,7 @@
   services.xserver.desktopManager.xfce.enable = false;
   services.xserver.desktopManager.gnome.enable = true;
   services.e-imzo.enable = true;
+  services.flatpak.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -66,6 +67,12 @@
     group = "users";
   };
 
+  programs.direnv = {
+    enable = true;
+    loadInNixShell = false;
+    nix-direnv.enable = true;
+  };
+  
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -107,19 +114,26 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
   virtualisation.docker.enable = true;
   environment.variables.EDITOR = "vim";
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default. 
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     spotify
-    discord-ptb 
+    discord-ptb
     git
     jetbrains.webstorm
     e-imzo
     yandex-music
+    wechat
+    wechat-uos
+    github-desktop
+    gnome-tweaks
+    gnome-extension-manager
+    google-chrome
+    vscode
+    obs-studio
   ];
 
   # Enable the OpenSSH daemon.
