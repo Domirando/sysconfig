@@ -7,9 +7,10 @@
 }: let
   modules = [
     outputs.homeModules.packages
-    outputs.homeModules.bash
+    outputs.homeModules.zsh
     outputs.homeModules.git
     outputs.homeModules.zellij
+    outputs.homeModules.starship
   ];
   cfg = {
     home = {

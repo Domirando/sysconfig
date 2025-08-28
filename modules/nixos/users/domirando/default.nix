@@ -1,6 +1,7 @@
 {
   inputs,
   outputs,
+  pkgs,
   ...
 }: let
   inherit (inputs.self) lib;
@@ -12,6 +13,7 @@ in
       domirando = {
         inherit hashedPassword;
         isNormalUser = true;
+        shell = pkgs.zsh;
         description = "Maftunaxon Vohidjonovna";
 
         extraGroups = [

@@ -21,7 +21,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # hostname.
+  networking.hostName = "domirando"; # hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -72,7 +72,7 @@
     loadInNixShell = false;
     nix-direnv.enable = true;
   };
-  
+  programs.zsh.enable = true;
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -134,6 +134,9 @@
     google-chrome
     vscode
     obs-studio
+    postman
+    brave
+    zsh
   ];
 
   # Enable the OpenSSH daemon.
