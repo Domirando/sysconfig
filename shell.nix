@@ -3,6 +3,7 @@ pkgs: pkgs.stdenv.mkDerivation {
   nativeBuildInputs = with pkgs; [
     git
     alejandra
+    ed
   ];
   
   NIX_CONFIG = "extra-experimental-features = nix-command flakes";

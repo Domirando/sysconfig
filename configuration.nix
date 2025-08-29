@@ -127,7 +127,7 @@
     e-imzo
     yandex-music
     wechat
-    wechat-uos
+    wechat-uos  
     github-desktop
     gnome-tweaks
     gnome-extension-manager
@@ -135,8 +135,10 @@
     vscode
     obs-studio
     postman
-    brave
     zsh
+    brave
+    android-studio
+    android-studio-tools
   ];
 
   # Enable the OpenSSH daemon.

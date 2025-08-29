@@ -36,7 +36,7 @@
       lib = nixpkgs.lib // home-manager.lib;
       nixosModules = import ./modules/nixos;
       homeModules = import ./modules/home;
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.domirando = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs outputs;};
         modules = [
