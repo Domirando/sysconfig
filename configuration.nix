@@ -132,7 +132,6 @@
     gnome-tweaks
     gnome-extension-manager
     google-chrome
-    vscode
     obs-studio
     postman
     zsh
