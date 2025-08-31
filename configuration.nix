@@ -136,6 +136,7 @@
     postman
     zsh
     brave
+    jetbrains.rust-rover
     android-studio
     android-studio-tools
   ];
