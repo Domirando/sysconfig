@@ -116,6 +116,8 @@
   nixpkgs.config.allowUnfree = true;
   virtualisation.docker.enable = true;
   environment.variables.EDITOR = "vim";
+  hardware.opengl.driSupport32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -137,8 +139,10 @@
     zsh
     brave
     jetbrains.rust-rover
+    vscode
     android-studio
     android-studio-tools
+    steam
   ];
 
   # Enable the OpenSSH daemon.
