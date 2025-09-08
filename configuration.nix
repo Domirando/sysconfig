@@ -113,6 +113,7 @@
   programs.firefox.enable = true;
 
   # Allow unfree packages
+
   nixpkgs.config.allowUnfree = true;
   virtualisation.docker.enable = true;
   environment.variables.EDITOR = "vim";
@@ -120,16 +121,17 @@
   hardware.pulseaudio.support32Bit = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    spotify
+
     discord-ptb
     git
     jetbrains.webstorm
     e-imzo
     yandex-music
     wechat
-    wechat-uos  
+    wechat-uos
     github-desktop
     gnome-tweaks
     gnome-extension-manager

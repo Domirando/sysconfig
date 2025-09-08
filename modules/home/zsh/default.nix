@@ -8,8 +8,8 @@
       eval "$(starship init zsh)"
     '';
     shellAliases = {
-        nrs = "sudo nixos-rebuild switch --flake .";
-        gstatuses = "ls | xargs -i sh -c 'echo _______ {} ______ && cd {} && git status -s -uno && cd .. '";
+      nrs = "sudo nixos-rebuild switch --flake .";
+      gstatuses = "ls | xargs -i sh -c 'echo _______ {} ______ && cd {} && git status -s -uno && cd .. '";
     };
   };
 }

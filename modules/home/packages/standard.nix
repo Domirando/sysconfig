@@ -19,6 +19,7 @@
   pkgs.notes
   pkgs.errands
   pkgs.iotas
+  pkgs.spotify
 
   pkgs.wget
   pkgs.kubectl

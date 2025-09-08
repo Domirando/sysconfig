@@ -6,8 +6,7 @@
 }: let
   inherit (inputs.self) lib;
   hashedPassword = lib.strings.concatStrings ["$y$j9T$7uoELFRD8t70X8IiTMHn/.$QQt5GT21792Vr5BpL53rY1fFQw2iOJ95MYlZRvvDU74"];
-in 
-{
+in {
   config = {
     users.users = {
       domirando = {
@@ -33,7 +32,7 @@ in
         );
       };
     };
-    
+
     home-manager = {
       backupFileExtension = "homebackup";
       extraSpecialArgs = {
