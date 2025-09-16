@@ -9,6 +9,7 @@
     outputs.homeModules.packages
     outputs.homeModules.zsh
     outputs.homeModules.git
+    outputs.homeModules.bash
     outputs.homeModules.zellij
     outputs.homeModules.starship
   ];
