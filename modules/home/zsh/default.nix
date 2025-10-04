@@ -9,6 +9,7 @@
     '';
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake .";
+      clean_store = "nix-collect-garbage";
       gstatuses = "ls | xargs -i sh -c 'echo _______ {} ______ && cd {} && git status -s -uno && cd .. '";
     };
   };

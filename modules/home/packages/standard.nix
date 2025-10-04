@@ -29,4 +29,6 @@
   pkgs.docker
   pkgs.ntfs3g
   pkgs.gnome-builder
+
+  pkgs.poedit
 ]
