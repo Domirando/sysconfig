@@ -1,5 +1,4 @@
 {
-  # espanso = import ./espanso;
   git = import ./git;
   zsh = import ./zsh;
   bash = import ./bash;

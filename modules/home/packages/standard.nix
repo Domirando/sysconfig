@@ -30,5 +30,30 @@
   pkgs.ntfs3g
   pkgs.gnome-builder
 
+  pkgs.yandex-music
+  pkgs.obs-studio
+  pkgs.google-chrome
+  pkgs.gnome-extension-manager
+  pkgs.gnome-tweaks
+  pkgs.github-desktop
+  pkgs.wechat
+  pkgs.wechat-uos
+  pkgs.postman
+  pkgs.jetbrains.webstorm
+  pkgs.git
+  pkgs.discord-ptb
+  pkgs.zsh
+  pkgs.brave
+  pkgs.jetbrains.rust-rover
+  pkgs.vscode
+  pkgs.android-studio
+  pkgs.android-studio-tools
+  pkgs.steam
+  pkgs.e-imzo
+  pkgs.firefox
+  pkgs.pulseaudio
+  pkgs.rtkit
+
+
   pkgs.poedit
 ]
