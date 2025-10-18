@@ -1,3 +1,3 @@
 {
-  domirando = ./domirando;
+  domirando = ./domirando.nix;
 }

@@ -54,6 +54,5 @@
   pkgs.pulseaudio
   pkgs.rtkit
 
-
   pkgs.poedit
 ]

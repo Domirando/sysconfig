@@ -40,7 +40,7 @@ in {
       };
       users = {
         # importing home-manager configs
-        domirando = import ../../../../home.nix;
+        domirando = import ../../../home.nix;
         # home-manager.useGlobalPkgs = true;
         # home-manager.useUserPackages = true;
       };

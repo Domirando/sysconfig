@@ -8,6 +8,8 @@
 }: {
   imports = [
     outputs.nixosModules.users.domirando
+    outputs.nixosModules.fonts
+
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -47,23 +49,22 @@
 
   # Configure keymap in X11 (-windowing system)
   services.xserver = {
-  enable = true;
+    enable = true;
     xkb = {
-          extraLayouts.uz = {
-            description = "Uzbek (Oʻzbekiston)";
-            languages = ["eng" "uzb"];
-            symbolsFile = "${pkgs.fetchFromGitHub {
-              owner = "itsbilolbek";
-              repo = "uzbek-latin-keyboard";
-              rev = "main";
-              hash = "sha256-09PLyZiimPTC9TiaZh1C2zTWBRz+yOJdwOXb8rOB7YU=";
-            }}/uz";
-            # symbolsFile = ../uz;
-          };
-          layout = "uz,us";
-          variant = "latin";
-
-        };
+      extraLayouts.uz = {
+        description = "Uzbek (Oʻzbekiston)";
+        languages = ["eng" "uzb"];
+        symbolsFile = "${pkgs.fetchFromGitHub {
+          owner = "itsbilolbek";
+          repo = "uzbek-latin-keyboard";
+          rev = "main";
+          hash = "sha256-09PLyZiimPTC9TiaZh1C2zTWBRz+yOJdwOXb8rOB7YU=";
+        }}/uz";
+        # symbolsFile = ../uz;
+      };
+      layout = "uz,us";
+      variant = "latin";
+    };
   };
 
   services.printing.enable = true;
@@ -78,7 +79,7 @@
     group = "users";
   };
 
-    programs.zsh.enable = true;
+  programs.zsh.enable = true;
 
   programs.direnv = {
     enable = true;
