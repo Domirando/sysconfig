@@ -55,15 +55,14 @@
         description = "Uzbek (Oʻzbekiston)";
         languages = ["eng" "uzb"];
         symbolsFile = ./uz;
-        };
+      };
       layout = "uz,us";
       variant = "latin";
-
     };
   };
 
   services.printing.enable = true;
-programs.gnupg.agent = {
+  programs.gnupg.agent = {
     enable = true;
     pinentryPackage = with pkgs; pinentry-all;
     enableSSHSupport = true;
