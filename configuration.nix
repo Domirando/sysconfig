@@ -54,20 +54,20 @@
       extraLayouts.uz = {
         description = "Uzbek (Oʻzbekiston)";
         languages = ["eng" "uzb"];
-        symbolsFile = "${pkgs.fetchFromGitHub {
-          owner = "itsbilolbek";
-          repo = "uzbek-latin-keyboard";
-          rev = "main";
-          hash = "sha256-09PLyZiimPTC9TiaZh1C2zTWBRz+yOJdwOXb8rOB7YU=";
-        }}/uz";
-        # symbolsFile = ../uz;
-      };
+        symbolsFile = ./uz;
+        };
       layout = "uz,us";
       variant = "latin";
+
     };
   };
 
   services.printing.enable = true;
+programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = with pkgs; pinentry-all;
+    enableSSHSupport = true;
+  };
   services.espanso = {
     enable = true;
     package = pkgs.espanso-wayland;
