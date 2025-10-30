@@ -30,10 +30,7 @@
   pkgs.ntfs3g
   pkgs.gnome-builder
 
-  #pkgs.pinentry
- # pkgs.gnupg
- # pkgs.pinentry-all
- # pkgs.pass
+  pkgs.postgresql
 
   pkgs.yandex-music
   pkgs.obs-studio
