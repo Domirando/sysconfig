@@ -7,6 +7,8 @@
 ./formatters
 ./simple-app.nix
 ./validated-app.nix
+./multiple-files.nix
+
   ];
 
   services = {
