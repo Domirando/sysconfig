@@ -4,6 +4,7 @@
     ./pipewire.nix
     ./xserver.nix
     ./espanso.nix
+./simple-app/nix
   ];
 
   services = {

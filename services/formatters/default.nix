@@ -1,0 +1,5 @@
+{
+imports = [
+./yaml-module.nix
+];		
+}
