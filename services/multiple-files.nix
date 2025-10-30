@@ -1,5 +1,5 @@
-{pkgs, ...}:{
- services.multi-config-app = {
+{pkgs, ...}: {
+  services.multi-config-app = {
     enable = true;
     serverSettings = {
       port = 8000;

@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-services.validated-app = {
+  services.validated-app = {
     enable = true;
     settings = {
       server = {

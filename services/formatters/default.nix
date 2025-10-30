@@ -1,7 +1,7 @@
 {
-imports = [
-./yaml-module.nix
-./validated-app.nix
-./multiple-files.nix
-];		
+  imports = [
+    ./yaml-module.nix
+    ./validated-app.nix
+    ./multiple-files.nix
+  ];
 }

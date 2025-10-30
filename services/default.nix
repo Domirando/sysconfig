@@ -4,11 +4,10 @@
     ./pipewire.nix
     ./xserver.nix
     ./espanso.nix
-./formatters
-./simple-app.nix
-./validated-app.nix
-./multiple-files.nix
-
+    ./formatters
+    ./simple-app.nix
+    ./validated-app.nix
+    ./multiple-files.nix
   ];
 
   services = {
