@@ -1,3 +1,4 @@
+{pkgs, ...}:{
  services.multi-config-app = {
     enable = true;
     serverSettings = {
@@ -13,4 +14,4 @@
       format = "text";
     };
   };
-
+}
