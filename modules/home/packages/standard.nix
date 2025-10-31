@@ -30,7 +30,7 @@
   pkgs.ntfs3g
   pkgs.gnome-builder
 
-  pkgs.postgresql
+  pkgs.btop
 
   pkgs.yandex-music
   pkgs.obs-studio
