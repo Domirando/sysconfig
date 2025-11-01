@@ -45,6 +45,8 @@
   pkgs.git
   pkgs.discord-ptb
 
+  pkgs.yt-dlp
+
   pkgs.brave
   pkgs.jetbrains.rust-rover
   pkgs.vscode
