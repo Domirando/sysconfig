@@ -4,6 +4,10 @@ packadd! comment
 packadd! editorconfig
 packadd! matchit
 
+call plug#begin('./vim-erry/autoload/plugged')
+   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
 source $VIMRUNTIME/defaults.vim
 
 set autoindent breakindent hlsearch ignorecase nojoinspaces linebreak smartcase
