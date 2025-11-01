@@ -29,7 +29,10 @@
     pkgs.vimPlugins.rust-vim
     pkgs.vimPlugins.coc-rust-analyzer
     pkgs.vimPlugins.fugitive
-    pkgs.vimPlugins.easymotion
+    pkgs.vimPlugins.nerdtree
+    pkgs.vimPlugins.nerdtree-git-plugin
+    pkgs.vimPlugins.vim-devicons
+    pkgs.vimPlugins.vim-nerdtree-syntax-highlight
   ];
   programs.vim.extraConfig = ''
     source ${./vimrc}
