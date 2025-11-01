@@ -21,6 +21,7 @@ There I save my system configs in order to be able to install them any time to a
 ## Fun facts & Thanks
 
 - [Orzklv/nix](https://github.com/orzklv/nix) - Learned from his configurations and intended to be the simplified version
+- [AstroSnail/home-manager](https://github.com/AstroSnail/home-manager) - used his vim config for which I am so grateful
 
 ## License
 
