@@ -25,8 +25,10 @@
   programs.vim.packageConfigurable = pkgs.vim-erry;
   programs.vim.defaultEditor = true;
   programs.vim.plugins = lib.mkForce [
-    # remove vim-sensible
     pkgs.vimPlugins.vim-erry
+    pkgs.vimPlugins.rust-vim
+    pkgs.vimPlugins.coc-rust-analyzer
+    pkgs.vimPlugins.fugitive
     pkgs.vimPlugins.easymotion
   ];
   programs.vim.extraConfig = ''
