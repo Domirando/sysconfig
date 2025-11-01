@@ -44,7 +44,7 @@
   pkgs.jetbrains.webstorm
   pkgs.git
   pkgs.discord-ptb
-  pkgs.zsh
+
   pkgs.brave
   pkgs.jetbrains.rust-rover
   pkgs.vscode

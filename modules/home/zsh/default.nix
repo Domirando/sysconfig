@@ -8,7 +8,7 @@
       eval "$(starship init zsh)"
     '';
     shellAliases = {
-      nrs = "sudo nixos-rebuild switch --flake .";
+      nrs = "alejandra .; alejandra ./*; git add . && sudo nixos-rebuild switch --flake . --show-trace";
       clean_store = "nix-collect-garbage";
       gstatuses = "ls | xargs -i sh -c 'echo _______ {} ______ && cd {} && git status -s -uno && cd .. '";
     };

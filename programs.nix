@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   programs.zsh.enable = true;
@@ -14,17 +15,5 @@
     enable = true;
     loadInNixShell = false;
     nix-direnv.enable = true;
-  };
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-    #package = pkgs.vim-full;
-    package = pkgs.vim.customize {
-                                  name = "vim";
-                                 vimrcConfig.packages.myVim = with pkgs.vimPlugins; {
-                                    start = [fugitive];
-                                 opt = [elm-vim];
-                                 };
-                                };
   };
 }

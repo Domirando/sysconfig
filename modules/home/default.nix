@@ -1,4 +1,5 @@
 {
+  vim = import ./vim;
   git = import ./git;
   zsh = import ./zsh;
   bash = import ./bash;
