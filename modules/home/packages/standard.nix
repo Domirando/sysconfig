@@ -1,7 +1,7 @@
 {pkgs, ...}: [
   # -- for server either ---
   pkgs.neofetch
-  pkgs.vim
+  pkgs.alejandra
   pkgs.nnn
   pkgs.glow
   pkgs.file
