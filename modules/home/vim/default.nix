@@ -5,7 +5,7 @@
 }: {
   nixpkgs.overlays = [
     (final: prev: {
-      vim-erry = prev.vim-full.overrideAttrs (oldattrs: {
+      domi-vim = prev.vim-full.overrideAttrs (oldattrs: {
         patches = oldattrs.patches;
       });
     })
@@ -13,19 +13,19 @@
       vimPlugins =
         prev.vimPlugins
         // {
-          vim-erry = final.vimUtils.buildVimPlugin {
-            name = "vim-erry";
-            src = ./vim-erry;
+          domi-vim = final.vimUtils.buildVimPlugin {
+            name = "domi-vim";
+            src = ./domi-vim;
           };
         };
     })
   ];
 
   programs.vim.enable = true;
-  programs.vim.packageConfigurable = pkgs.vim-erry;
+  programs.vim.packageConfigurable = pkgs.domi-vim;
   programs.vim.defaultEditor = true;
   programs.vim.plugins = lib.mkForce [
-    pkgs.vimPlugins.vim-erry
+    pkgs.vimPlugins.domi-vim
     pkgs.vimPlugins.rust-vim
     pkgs.vimPlugins.coc-rust-analyzer
     pkgs.vimPlugins.fugitive

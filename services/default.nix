@@ -11,7 +11,7 @@
   ];
 
   services = {
-    e-imzo.enable = true;
+    e-imzo.enable = false;
     flatpak.enable = true;
   };
 }

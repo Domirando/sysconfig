@@ -4,7 +4,7 @@ packadd! comment
 packadd! editorconfig
 packadd! matchit
 
-call plug#begin('./vim-erry/autoload/plugged')
+call plug#begin('./domi-vim/autoload/plugged')
    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
