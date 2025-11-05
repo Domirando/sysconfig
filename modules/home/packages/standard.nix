@@ -9,16 +9,15 @@
   pkgs.fzf
   # ------------
 
-  pkgs.neovim
   pkgs.nodejs_24
   pkgs.fractal
   pkgs.telegram-desktop
   pkgs.ghostty
   pkgs.unzip
   pkgs.zip
-  pkgs.notes
+
   pkgs.errands
-  pkgs.iotas
+
   pkgs.spotify
 
   pkgs.wget
@@ -31,6 +30,10 @@
   pkgs.gnome-builder
 
   pkgs.btop
+
+  pkgs.anki
+  pkgs.anki-sync-server
+  pkgs.termdown
 
   pkgs.yandex-music
   pkgs.obs-studio
@@ -49,14 +52,13 @@
 
   pkgs.brave
   pkgs.jetbrains.rust-rover
-  pkgs.vscode
+
   pkgs.android-studio
   pkgs.android-studio-tools
-  pkgs.steam
+
   pkgs.e-imzo
   pkgs.firefox
   pkgs.pulseaudio
-  pkgs.rtkit
 
   pkgs.poedit
 ]
