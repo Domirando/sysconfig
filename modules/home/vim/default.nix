@@ -26,8 +26,8 @@
   programs.vim.defaultEditor = true;
   programs.vim.plugins = lib.mkForce [
     pkgs.vimPlugins.domi-vim
-    pkgs.vimPlugins.rust-vim
-    pkgs.vimPlugins.coc-rust-analyzer
+    # pkgs.vimPlugins.rust-vim
+    # pkgs.vimPlugins.coc-rust-analyzer
     pkgs.vimPlugins.fugitive
     pkgs.vimPlugins.nerdtree
     pkgs.vimPlugins.nerdtree-git-plugin
