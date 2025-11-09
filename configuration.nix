@@ -40,7 +40,16 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "uz_UZ.UTF-8";
-
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    ibus.engines = with pkgs.ibus-engines; [
+      mozc
+      table-chinese
+      rime
+      pinyin
+    ];
+  };
   security.wrappers.espanso = {
     source = "${lib.getExe pkgs.espanso-wayland}";
     capabilities = "cap_dac_override+eip";
