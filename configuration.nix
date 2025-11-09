@@ -41,12 +41,13 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "uz_UZ.UTF-8";
   i18n.inputMethod = {
-    type = "fcitx5";
+    type = "ibus";
     enable = true;
     ibus.engines = with pkgs.ibus-engines; [
       mozc
       table-chinese
       rime
+      libpinyin
       pinyin
     ];
   };
