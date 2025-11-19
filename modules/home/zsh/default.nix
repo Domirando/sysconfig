@@ -6,6 +6,7 @@
     autosuggestion.enable = true;
     initContent = ''
       eval "$(starship init zsh)"
+      export PATH="/home/domirando/Workspace/Programs/flutter/bin:$PATH"
     '';
     shellAliases = {
       nrs = "alejandra .; alejandra ./*; git add . && sudo nixos-rebuild switch --flake . --show-trace";

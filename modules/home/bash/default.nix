@@ -5,9 +5,9 @@
       enableCompletion = true;
       bashrcExtra = ''
             	export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-        export PATH="$PATH:/usr/local/bin/espanso"
-
+        export PATH="/home/domirando/Workspace/Programs/flutter/bin:$PATH"
       '';
+
       shellAliases = {
         nrs = "alejendar .; alejandra ./*; git add . && sudo nixos-rebuild switch --flake . --show-trace";
       };
